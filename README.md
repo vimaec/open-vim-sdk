@@ -2,7 +2,7 @@
 
 This repository houses the implementation for various open-source libraries and technologies that we have developed at [VIM](http://vimaec.com) for facilitating the development of more efficient BIM and general purpose 3D applications for ourselves, our partners, and our customers. We believe that the AEC (Architecture, Engineering, and Construction) industry is being held back by lack of software innovation and that the way to move forward is for the community to share access to data and technology. 
 
-At [VIM](http://vimaec.com/about) we push the boundaries of what people have come to expect from their BIM software in terms of performance and scalability by leveraging our collective backgrounds across various industries (film, games, architecture, construction, CAD, VR/AR, advertising, etc.).
+At [VIM](http://vimaec.com/about) we push the boundaries of what people have come to expect from their BIM software in terms of performance and scalability by leveraging our collective backgrounds across various industries (film, games, advertising, architecture, construction, CAD, VR/AR, and software).
 
 ## Contents
 
