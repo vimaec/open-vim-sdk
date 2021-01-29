@@ -1,0 +1,13 @@
+﻿<Window x:Class="Vim.Explorer.Plugin.SliderListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vim.Explorer.Plugin"
+             mc:Ignorable="d" Height="302.885" Width="282.005">
+    <Grid>
+        <Slider Name="Slider" HorizontalAlignment="Stretch" Margin="10,10,10,0" VerticalAlignment="Top" />
+        <ListBox Name="ListBox" HorizontalAlignment="Stretch" Margin="10,76,2,10" VerticalAlignment="Stretch" Width="262"/>
+        <ComboBox Name="GroupingComboBox" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="254"/>
+    </Grid>
+</Window>

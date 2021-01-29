@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Vim.ObjectModel.CodeGen": {
+      "commandName": "Project",
+      "commandLineArgs": "..\\..\\..\\..\\ObjectModel\\ObjectModelGenerated.cs"
+    }
+  }
+}

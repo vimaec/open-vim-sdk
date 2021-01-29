@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BFast\csharp\Vim.BFast\Vim.BFast.csproj" />
+    <ProjectReference Include="..\DotNetUtilities\Vim.DotNetUtilities.csproj" />
+    <ProjectReference Include="..\G3d\csharp\Vim.G3d\Vim.G3d.csproj" />
+    <ProjectReference Include="..\LinqArray\LinqArray\Vim.LinqArray.csproj" />
+    <ProjectReference Include="..\Math3d\src\Vim.Math3d.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ArrayOps.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ArrayOps.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ArrayOps.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ArrayOps.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

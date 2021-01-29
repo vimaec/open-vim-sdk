@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject>Vim.ObjectModel.CodeGen.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ObjectModel\ObjectModel.cs" Link="ObjectModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetUtilities\Vim.DotNetUtilities.csproj" />
+    <ProjectReference Include="..\Geometry\Vim.Geometry.csproj" />
+    <ProjectReference Include="..\Math3d\src\Vim.Math3d.csproj" />
+    <ProjectReference Include="..\DataFormat\Vim.DataFormat.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;$(OutDir)Vim.ObjectModel.CodeGen.exe&quot; &quot;..\ObjectModel\ObjectModelGenerated.cs&quot;" />
+  </Target>
+
+</Project>

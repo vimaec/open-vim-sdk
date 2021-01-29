@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BFast\csharp\Vim.BFast\Vim.BFast.csproj" />
+    <ProjectReference Include="..\DotNetUtilities\Vim.DotNetUtilities.csproj" />
+    <ProjectReference Include="..\G3d\csharp\Vim.G3d\Vim.G3d.csproj" />
+    <ProjectReference Include="..\Geometry\Vim.Geometry.csproj" />
+    <ProjectReference Include="..\LinqArray\LinqArray\Vim.LinqArray.csproj" />
+    <ProjectReference Include="..\Math3d\src\Vim.Math3d.csproj" />
+  </ItemGroup>
+
+</Project>

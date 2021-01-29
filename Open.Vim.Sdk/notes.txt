@@ -1,0 +1,15 @@
+TODO:
+* Run tests
+* Go through DotNetUtilities and document it and review code
+* Carefully review Geometry (some code needs to remain in the original project)
+* Consider merging all of the tests together 
+* Move all of the readme's out of the repo
+* Look at the VIM C++ reading code, and copy it out of the renderer
+* Rename "Vim.SceneBuilder"
+* Rename the folders that start with "Vim."
+* Using the same folder structure for the other projects 
+* Add Node.JS projects to the system 
+* Replace the templates and code generator with source generators (maybe)
+* Put copyright notices 
+* Convert all tests to .NET CORE
+* Generate NuGets from everything 

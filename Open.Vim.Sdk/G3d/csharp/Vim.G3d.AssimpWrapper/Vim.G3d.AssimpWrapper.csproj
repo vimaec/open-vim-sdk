@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>Vim.G3d.AssimpWrapper</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\BFast\csharp\Vim.BFast\Vim.BFast.csproj" />
+        <ProjectReference Include="..\..\..\LinqArray\LinqArray\Vim.LinqArray.csproj" />
+        <ProjectReference Include="..\..\..\Math3d\src\Vim.Math3d.csproj" />
+        <ProjectReference Include="..\Vim.G3d\Vim.G3d.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AssimpNet" Version="4.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Properties\" />
+    </ItemGroup>
+
+</Project>
