@@ -13,3 +13,9 @@ TODO:
 * Put copyright notices 
 * Convert all tests to .NET CORE
 * Generate NuGets from everything 
+* Write a plug-in won't load diagnostic document (and tool)
+* Add a VIM inspector tool 
+* Deprecate ISceneNode.Children 
+* Need to fix bug in demo: only want to show thing that are available. 
+* Make the slider tool show 
+* Ship a sample file 

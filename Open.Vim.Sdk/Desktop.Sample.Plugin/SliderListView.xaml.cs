@@ -48,11 +48,11 @@ namespace Vim.Explorer.Plugin
 
         private void GroupingComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Init(Controller);
+            Init(Helper);
             Slider.Value = 0;
         }
 
-        public VimVisibilityController Controller { get; set; }
+        public VimHelper Helper { get; set; }
 
         public int[] Ids { get; set; }
 
@@ -97,6 +97,7 @@ namespace Vim.Explorer.Plugin
         {
             switch (gt)
             {
+                // TODO: this should only show names where we can find a node with geometry that uses it. 
                 case GroupingType.Category:
                     return vim.Model.CategoryList.Select(x => x.Name ?? "<unnamed>").ToEnumerable();
                 case GroupingType.Family:
@@ -121,17 +122,17 @@ namespace Vim.Explorer.Plugin
             }
         }
 
-        public void Init(VimVisibilityController controller)
+        public void Init(VimHelper helper)
         {
             Show();
-            Controller = controller;
+            Helper = helper;
             var gt = (GroupingType)GroupingComboBox.SelectedIndex;
-            var names = GroupingNames(controller.Vim, gt).ToList();
+            var names = GroupingNames(helper.Vim, gt).ToList();
             ListBox.ItemsSource = names;
             Slider.Maximum = names.Count;
             Slider.SmallChange = 1;
             Slider.LargeChange = 5;
-            Ids = NodesToId(controller.Vim, gt).ToArrayInParallel();
+            Ids = NodesToId(helper.Vim, gt).ToArrayInParallel();
             Slider.ValueChanged += Slider_ValueChanged;
         }
 
@@ -140,7 +141,7 @@ namespace Vim.Explorer.Plugin
             var val = (int)Slider.Value;
             if (ListBox.SelectedIndex != val)
                 ListBox.SelectedIndex = val;
-            Controller.ShowNodes(n => Ids[n.Id] == val);
+            Helper.ShowNodes(n => Ids[n.Id] == val);
         }
     }
 }

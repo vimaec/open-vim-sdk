@@ -7,8 +7,8 @@
     <ProjectGuid>{A451E470-AAF7-4601-9C41-AC4A3A8299B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Vim.Desktop.Plugin.Samples</RootNamespace>
-    <AssemblyName>Vim.Desktop.Plugin.Samples</AssemblyName>
+    <RootNamespace>Vim.Desktop.Sample.Plugin</RootNamespace>
+    <AssemblyName>Vim.Desktop.Sample.Plugin</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\..\Users\Christopher Diggins\VIM\Desktop Plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,14 +26,17 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\..\..\..\Users\Christopher Diggins\VIM\Desktop Plugins\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,41 +45,75 @@
     <Reference Include="System.Xml" />
     <Reference Include="Vim.BFast">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.BFast.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.Constants">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.Constants.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.Desktop.Api">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.Desktop.Api.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.Desktop.Camera.Plugin">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.Desktop.Camera.Plugin.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.DotNetUtilities">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.DotNetUtilities.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.G3d">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.G3d.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.Geometry">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.Geometry.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.Huddle.Client">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.Huddle.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.Huddle.Core">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.Huddle.Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.LinqArray">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.LinqArray.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Vim.Math3d">
       <HintPath>..\..\..\..\..\..\..\Program Files\VIM\Viewer\Vim.Math3d.dll</HintPath>
+      <Private>False</Private>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MyFirstPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SliderListView.xaml.cs">
+      <DependentUpon>SliderListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VimHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="SliderListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ObjectModel\Vim.ObjectModel.csproj">
+      <Project>{85502D3A-CCBD-48B2-B968-A58418A7283A}</Project>
+      <Name>Vim.ObjectModel</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SceneBuilder\Vim.SceneBuilder.csproj">
+      <Project>{a87222bc-e678-4cb4-82b3-fa4468e52e45}</Project>
+      <Name>Vim.SceneBuilder</Name>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

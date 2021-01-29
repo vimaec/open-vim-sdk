@@ -23,5 +23,8 @@ namespace Vim.Geometry
         int GeometryIndex { get; }
         IMesh GetGeometry();
         ISceneNode Parent { get; }
+
+        // TODO: DEPRECATE: this needs to be removed, currently only used in Vim.Max.Bridge.
+        IArray<ISceneNode> Children { get; }
     }
 }
