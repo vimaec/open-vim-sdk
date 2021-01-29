@@ -19,3 +19,7 @@ TODO:
 * Need to fix bug in demo: only want to show thing that are available. 
 * Make the slider tool show 
 * Ship a sample file 
+* Put node data into the G3D of the VIM
+* Remove face data
+* Strip textures when sending over the wire
+* Run a "deduplication step"

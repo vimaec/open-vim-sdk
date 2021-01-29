@@ -191,18 +191,6 @@ namespace Vim.Geometry
             return indices.ToIArray();
         }
 
-        public static IArray<int> TriMeshCylinderCapIndices(int numEdgeVertices)
-        {            
-            var indices = new List<int>();
-            for (var i=0; i < numEdgeVertices - 1; ++i)
-            {
-                indices.Add(0);
-                indices.Add(i + 1);
-                indices.Add(i + 2 == numEdgeVertices ? 1 : i + 2);
-            }
-            return indices.ToIArray();
-        }
-
         /// <summary>
         /// Creates a quad mesh given a mapping from 2 space to 3 space 
         /// </summary>
