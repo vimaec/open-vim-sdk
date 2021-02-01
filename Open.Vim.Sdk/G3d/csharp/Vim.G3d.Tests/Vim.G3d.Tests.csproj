@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NUnit" Version="3.12.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\BFast\csharp\Vim.BFast\Vim.BFast.csproj" />
+        <ProjectReference Include="..\..\..\DotNetUtilities\Vim.DotNetUtilities.csproj" />
+        <ProjectReference Include="..\..\..\LinqArray\LinqArray\Vim.LinqArray.csproj" />
+        <ProjectReference Include="..\..\..\Math3d\src\Vim.Math3d.csproj" />
+        <ProjectReference Include="..\..\cpp\Vim.G3d.CppCLR\Vim.G3d.CppCLR.vcxproj" />
+        <ProjectReference Include="..\Vim.G3d.AssimpWrapper\Vim.G3d.AssimpWrapper.csproj" />
+        <ProjectReference Include="..\Vim.G3d\Vim.G3d.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Properties\" />
+    </ItemGroup>
+
+</Project>
