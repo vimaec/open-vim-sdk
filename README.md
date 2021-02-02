@@ -10,14 +10,20 @@ At [VIM](http://vimaec.com/about) we push the boundaries of what people have com
 
 This repository houses implementations and tests for the following libraries and data formats. 
 
-* [VIM](https://github.com/vimaec/vim) - An efficient data format for BIM and 3D data. 
-* [Math3D](https://github.com/vimaec/math3d) - A .NET 3D math library. Math3D acts as a drop-in replacement for System.Numerics with added functionality and strict alignment for cross platform serialization. 
-* [LinqArray](https://github.com/vimaec/linqarray) - A .NET library that allows LINQ type queries on immutable arrays, while maintaining safety and peformance. 
-* [G3D](https://github.com/vimaec/g3d) - A simple and efficient cross-platform 3D geometry format for meshes and point clouds. 
-* [BFAST](https://github.com/vimaec/bfast) - A data format for efficient cross-platform serialization of collections of byte arrays
-* [VIM Desktop SDK](https://github.com/vimaec/vim-desktop-sdk) - A .NET SDK for extending the VIM desktop application 
+* VIM - An efficient data format for BIM and 3D data. 
+    * [Object Model](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/ObjectModel) - C# Implementation of an Object Relational Model (ORM)
+    * [Data Format](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/DataFormat) - Low Level Serialization code for tables, geometry, and assets 
+    * [Scene Builder](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/SceneBuilder) - High-level serialization and helper code
+    * [VIM Format Specification](https://github.com/vimaec/vim) - VIM Specification Document
+* [Math3D](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/Math3d) - A .NET 3D math library. Math3D acts as a drop-in replacement for System.Numerics with added functionality and strict alignement     
+* [LinqArray](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/LinqArray) - A .NET library with LINQ style syntax for immutable arrays, while maintaining safety and peformance.     
+* [G3D](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/LinqArray) - A simple and efficient cross-platform 3D geometry format for meshes and point clouds. 
+* [BFAST](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/BFast) - A data format for efficient cross-platform serialization of collections of byte arrays
+* [VIM Desktop SDK](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/Desktop.Sample.Plugin) - A .NET SDK for extending the VIM desktop application 
+* [.NET Utilities](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/DotNetUtilities) - A collection of .NET utility code. 
+* [VIM Geometry](https://github.com/vimaec/open-vim-sdk/tree/main/Open.Vim.Sdk/Geometry) - A Library of 3D geometry code
 
-While each project above has its own repository, we chose to put all of the implementation in one repository to facilitate testing and deployment, and to more easily accept changes and suggestions from the community at large. 
+While many projects have their own repository with a landing page, we chose to put all of the implementation in one repository to facilitate testing and deployment, and to more easily accept changes and suggestions from the community at large. 
 
 ## Contributing 
 
