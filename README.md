@@ -1,4 +1,4 @@
-# VIM Open SDK
+# Open VIM SDK
 
 This repository houses the implementation for various open-source libraries and technologies that we have developed at [VIM](http://vimaec.com) for facilitating the development of more efficient BIM and general purpose 3D applications for ourselves, our partners, and our customers. We believe that the AEC (Architecture, Engineering, and Construction) industry is being held back by lack of software innovation and that the way to move forward is for the community to share access to data and technology. 
 
