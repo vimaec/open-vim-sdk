@@ -46,8 +46,8 @@ namespace Vim
 
         public Face Face => FaceId < 0 || FaceId >= _Scene.Model.FaceList.Count ? null : _Scene.Model.FaceList[FaceId];
 
-        // TODO: this extra check should not be necessary, but it fails on some files like "rac_basic_sample_project.vim"
-        public int ElementIndex => _Scene.Model.NodeElement.ElementAtOrDefault(Id, -1);
+        // TODO: this extra check should not be necessary, but it fails on some files like "rac_basic_sample_project.vim" and "B11.vim"
+        public int ElementIndex => _Scene.Model.NodeElement?.ElementAtOrDefault(Id, -1) ?? Face?.Element?.Index ?? -1;
         public Element Element => _Scene.Model.GetElement(ElementIndex);
         public string ElementName => Element?.Name ?? "";
 
